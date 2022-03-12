@@ -1,0 +1,28 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/class" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{class._id}}">
+    <div class="container">
+        <div class="form-group">
+            <label>Class</label>
+            <input type="text" class="form-control" name="standard" placeholder="Class" value="{{class.standard}}">
+            <div class="text-danger">
+                {{class.standardError}}
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label>Division</label>
+            <input type="text" class="form-control" name="division" placeholder="Division" value="{{class.division}}">
+            <div class="text-danger">
+                {{class.divisionError}}
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-info"></i>Submit</button>
+            <a class="btn btn-info" href="/class/list">View all</a>
+            <a class="btn btn-info" href="/student/list">Student list</a>
+        </div>
+    </div>
+
+</form>

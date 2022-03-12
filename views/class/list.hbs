@@ -1,0 +1,23 @@
+<h3><a href="/class" class="btn btn-secondary" ><i class="fa fa-plus"></i>Create new</a>Class List</h3>
+<table class="table table-stripped">
+<thead>
+    <tr>
+        <th>Standard</th>
+        <th>Division</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    {{#each list}}
+    <tr>
+    <td>{{this.standard}}</td>
+    <td>{{this.division}}</td>
+   
+    <td>
+        <a href="/class/{{this._id}}" ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+        <a href="/class/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?')"  ><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+    </td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>

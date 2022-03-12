@@ -1,0 +1,46 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/student" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{student._id}}">
+    <div class="container">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" name="fullName" placeholder="Full name"
+                value="{{student.fullName}}">
+            <div class="text-danger">
+                {{student.fullNameError}}
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control" name="mobileNo" placeholder="Mobile number"
+                value="{{student.mobileNo}}">
+            <div class="text-danger">
+                {{student.mobileNoError}}
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label>Roll No</label>
+                <input type="text" class="form-control" name="rollNo" placeholder="Roll no" value="{{student.rollNo}}">
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Class Id</label>
+                <input type="text" class="form-control" name="classId" placeholder="Class Id"
+                    value="{{student.classId}}">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+            <a class="btn btn-info" href="/student/list"><i class="fa fa-list-alt"></i>View all</a>
+            <a class="btn btn-info" href="/class"><i class="fa fa-plus"></i>Create class</a>
+        </div>
+    </div>
+
+</form>
